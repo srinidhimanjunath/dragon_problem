@@ -16,7 +16,7 @@ class dragon{
 	{
 		System.out.println("Enter 1)courier and 2)Travel");
 		
-		int choice = key.nextInt();
+		int choice =Integer.parseInt( key.nextLine());
 		switch(choice)
 		{
 		case 1:
@@ -24,7 +24,7 @@ class dragon{
 			obj1.send();
 		case 2:
 			System.out.println("Enter the total number of travelers");
-			rider = key.nextInt();
+			rider = Integer.parseInt(key.nextLine());
 			rem =rider / 6;
 			dif =   rider - 6*rem;
 			if(rem >= 1) {
@@ -44,7 +44,6 @@ class dragon{
 	
 	boolean fly()
 	{
-		
 		System.out.println("Enter the whether you want use aerial transpotation with true or By a false");
 		ch1 = key.nextBoolean();
 		return ch1;
@@ -109,7 +108,7 @@ class rainbow_dragon extends dragon{
 	//private String  dest;
 	//private int dist;
 	//Scanner obj = new Scanner(System.in);
-	pink_dragon ab = new pink_dragon();
+	pink_dragon o = new pink_dragon();
 	void send(int ri) {
 		//System.out.println("Enter the source\n");
 		//Source = obj.nextLine();
@@ -120,11 +119,11 @@ class rainbow_dragon extends dragon{
 		System.out.println("Plz Enter whetehr you want to use rainbow dragon in aerial mode or land mode by answering this simple question");
 		if(super.fly())
 		{
-			System.out.println(ri + " rainbow dragons are required to travel from " + ab.Source + " to " + ab.dest +" By landWays");
+			System.out.println(ri/2 + " rainbow dragons are required to travel from  By airways");
 		}
 		else if(!super.fly() )
 		{
-			System.out.println(ri%2 + " rainbow dragons are required to travel from " + ab.Source + " to " + ab.dest +" By airways");
+			System.out.println(ri + " rainbow dragons are required to travel  By landWays");
 			
 		}
 		
@@ -150,3 +149,4 @@ public class endUser {
 	
 	
 }
+
